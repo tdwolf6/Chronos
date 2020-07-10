@@ -1,16 +1,22 @@
+import 'jsdom-global/register';
+import { JSDOM } from 'jsdom';
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { configure, shallow, render } from 'enzyme';
+import chai from 'chai';
+import Adapter from 'enzyme-adapter-react-16';
+import chaiEnzyme from 'chai-enzyme';
 import { expect } from 'chai';
-import GraphsContainer from '../app/containers/GraphsContainer';
+import GraphsContainer from '../app/containers/GraphsContainer.tsx';
 
-describe('GraphsContainer', () => {
-  let wrapper;
+configure({ adapter: new Adapter() });
 
-  beforeAll(() => {
-    wrapper = shallow(<GraphsContainer />);
-  });
+// describe('GraphsContainer renders components', () => {
+//   it(' renders component', () => {
+//     const wrapper = shallow(GraphsContainer);
 
-  it('renders multiple graph components', () => {
-    expect();
-  });
-});
+//     expect(wrapper).to.contain('something');
+//   });
+//   chai.use(chaiEnzyme());
+// });
+
+describe('GraphsContainer renders components', () => {});
