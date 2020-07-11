@@ -1,0 +1,8 @@
+import { combineReducers } from 'redux';
+import healthReducer from './healthReducer';
+
+const reducers = combineReducers({
+  health: healthReducer,
+});
+
+export default reducers;
